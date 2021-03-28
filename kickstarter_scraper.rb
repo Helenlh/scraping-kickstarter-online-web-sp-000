@@ -1,5 +1,4 @@
 require "nokogiri"
-#require_relative '/Project' 
 require 'pry'
 
 # def get_page 
@@ -28,4 +27,19 @@ kickstarter.css("li.project.grid_4").each do |project|
   projects 
 end
 
+QUESTIONS:
 
+why don't I need a Project file like I did in the first scraper lab where I had course.rb.
+
+in the first scraper lab, I just had to hover over elements such as title and date, but in this lab I had to click on the element.  Why is this?
+
+in the first lab, I had: 
+# def get_page
+#   doc = Nokogiri::HTML(open('http://fixtures/kickstarter.html'))
+# end 
+
+in this lab, I have:
+ html = File.read('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html)
+
+does File.read do the same thing as the doc = Nokogiri command?
